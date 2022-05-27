@@ -1,0 +1,142 @@
+<script>
+$('input[type="text"]').on('focusout', function () {
+  "use strict";
+  var ele = $(this);
+  if (ele.val()) {
+    ele.addClass('input-big');
+  } else {
+    ele.removeClass('input-big');
+  }
+});
+
+$('.msg').on('focusout', function () {
+  "use strict";
+  var ele = $(this);
+  if (ele.val()) {
+    ele.addClass('msg-big');
+  } else {
+    ele.removeClass('msg-big');
+  }
+});
+</script>
+<body>
+<form action="#">
+  <input class="emailbox" type="text" placeholder="Name" required="required"/>
+  <input class="emailbox" type="text" placeholder="E-mail" required="required"/>
+  <input class="emailbox" type="text" placeholder="Subject" required="required"/>
+  <textarea class="msg" placeholder="Message" required="required"></textarea>
+  <input id="emailbutton" type="submit" value="Send it!"/>
+</form>
+<style>
+
+
+
+.emailbox, .msg {
+  margin: 10px auto;
+  padding: 20px 0;
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #00c6e8;
+  border: none;
+  border-radius: 100%;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  text-align: center;
+  font-size: 0.8em;
+  color: #fafafa;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -ms-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.emailbox:hover, .msg:hover {
+  background: #00b0e8;
+}
+
+.emailbox::-webkit-input-placeholder, .msg::-webkit-input-placeholder {
+  color: #fafafa;
+}
+
+.emailbox::-moz-placeholder, .msg::-moz-placeholder {
+  color: #fafafa;
+}
+
+.emailbox::-ms-placeholder, .msg::-ms-placeholder {
+  color: #fafafa;
+}
+
+.emailbox:focus, .msg:focus {
+  width: 200px;
+  background: #00b0e8;
+  border: none;
+  border-radius: 5px;
+  text-indent: 10px;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.input-big {
+  width: auto;
+  border-radius: 5px;
+}
+
+.msg {
+  resize: none;
+  overflow: hidden;
+}
+
+.msg:focus {
+  width: 400px;
+  height: 400px;
+  line-height: 20px;
+  cursor: inherit;
+}
+
+.msg-big {
+  width: 400px;
+  line-height: 20px;
+  border-radius: 5px;
+}
+
+#emailbutton {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 100%;
+  background: #00c6e8;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 60px;
+  text-align: center;
+  color: #fafafa;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+#emailbutton:hover {
+  background: #00b0e8;
+}
+
+#emailbutton:active {
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+}
+</style>
+</body>
