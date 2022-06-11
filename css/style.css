@@ -626,3 +626,24 @@ animation: textureSpinreverse 8s linear infinite;
     transform: translateX(0);
   }
 }
+.lowbackGround {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	min-height: 1000%;
+	background-image: url("../images/animated/swirl.gif");
+	background-position: center;
+	background-size: cover;
+}
+
+.backgroundImage {
+  position: absolute;
+  top:0;
+  left:0;
+  display: block;
+}
+.swiper {
+  width: 600px;
+  height: 300px;
+}
