@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css" />
 
   <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
- 
+
   <title>MaTH TeCHNoLoGY</title>
 
   <meta charset="UTF-8">
@@ -61,10 +61,10 @@
   <div class="low-layer low-layer--3"></div>
   <div class="low-layer low-layer--4">
     <div class="lowbackGround"><img class="backgroundImage" src="/checkmatetransparent.png" /></div>
-    
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="cards">
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="cards">
           <div class="swiper-slide">
             <div class="card">
               <div class="card__image-holder">
@@ -318,9 +318,13 @@
         counter = counter + 83171;
         document.getElementById("counters").innerHTML = counter;
       }, 1000);</script>
-    <div id="counters"></div>
-    <div class='counterWords'>Google searches have happened since you came to this website. <br /><br />Currently,
-      there are about 83,171 google searches going on every second.</div><br />
+
+    <div id="topwords">
+      <div id="counters"></div>
+      <div class='counterWords'>Google searches have happened since you came to this website. <br />Currently,
+        there are about 83,171 google searches going on every second.</div><br />
+    </div>
+
     <style>
       @import url("https://fonts.googleapis.com/css?family=Montserrat:900");
 
@@ -329,16 +333,23 @@
         background: url("https://earthsky.org/upl/2020/01/Tarantula-Nebula-Spitzer-Jan-27-2020-800x450.jpg") no-repeat left/120%;
         margin-top: 5vh;
         text-align: center;
-        width: 90vw;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        width: 100vw;
+        /* margin-left: 5vw; */
+        /* margin-right: 5vw; */
+        /* padding-right: 3vw; */
+      }
+
+      #topwords {
+        position: relative;
+        display: block;
+        top: -8vw;
       }
 
       .wordz {
         background: white;
         color: black;
         font-family: "Montserrat", sans-serif;
-        font-size: 15vw;
+        font-size: 12vw;
         margin: 0;
         mix-blend-mode: lighten;
         text-transform: uppercase;
@@ -364,11 +375,41 @@
           background-position: 100% 40%;
         }
       }
-    </style>
-    <div class="wordzwrapper">
-      <h1 class="wordz" data-text="upgrade">upgrade</h1>
-    </div>
 
+      #middle {
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 40vh;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+
+      #bottomside {
+        bottom: 0;
+        position: absolute;
+      }
+
+      #iframeDancing {
+        height: 40vh;
+        width: 70vh;
+      }
+    </style>
+    <span id="middle">
+      <div class="sketchfab-embed-wrapper"> <iframe id="iframeDancing" title="zachnewer22" frameborder="0"
+          allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+          allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport
+          execution-while-not-rendered web-share
+          src="https://sketchfab.com/models/f8f92c05f8394061a0614eb70cecc8ef/embed?autostart=1&ui_hint=0&ui_theme=dark">
+        </iframe> </div>
+    </span>
+    <span id="bottomside">
+      <div class="wordzwrapper">
+        <h1 class="wordz" data-text="upgrade">upgrade</h1>
+      </div>
+    </span>
   </div>
   <div class="right-layer"></div>
   <div class="right-layer right-layer--2"></div>
@@ -420,7 +461,7 @@
 
   </div>
   </div>
-<script type="module" src="./swipe.js"></script>
+  <script type="module" src="./swipe.js"></script>
   <script src='js/EasePack.min.js'></script>
   <script src='js/rAF.js'></script>
   <script src='js/TweenLite.min.js'></script>
